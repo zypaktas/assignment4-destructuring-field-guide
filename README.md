@@ -716,3 +716,18 @@ Keeping the object grouped can make the origin of each setting more obvious. Des
 
 The Task Manager examples refer to the Assignment 3 source files. The TypeScript and React Navigation examples link to their public source repositories so the code can be checked independently.
 
+## Bonus 4 – Git Repository
+
+GitHub repository: https://github.com/zypaktas/assignment4-destructuring-field-guide
+
+The project is version-controlled with Git and contains six meaningful commits. The repository includes the source files, documentation, and verified output. The `.gitignore` file excludes `node_modules/` and `.DS_Store`.
+
+To clone and run the project:
+
+```bash
+git clone https://github.com/zypaktas/assignment4-destructuring-field-guide.git
+cd assignment4-destructuring-field-guide
+npm install
+npm run all
+npm run check
+```
