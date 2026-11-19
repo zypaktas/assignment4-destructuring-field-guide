@@ -1,0 +1,128 @@
+
+> destructuring-guide@0.0.0 all
+> npm run js && npm run ts
+
+
+> destructuring-guide@0.0.0 js
+> node js/arrays.mjs && node js/objects.mjs && node js/params.mjs && node js/pitfalls.mjs && tsx js/props.jsx && node js/depth.mjs
+
+form 1: 2 9
+form 2: Dune [ 'Klara and the Sun', 'Piranesi' ]
+form 3: Copenhagen Oslo
+form 4: high tomorrow
+form 5: Buy milk todo
+form 6: Dune
+form 7: Library 60
+form 8: u7 { username: 'zey', department: 'MIS', year: 2 }
+form 9: Ada prototype [ 'testing', 'launch' ]
+form 10: status in-progress
+form 11: { title: 'Read', status: 'todo' }
+form 11b: 41, 29
+form 12a: theme=dark, notifications=true
+form 12b: A1:Mina, A2:Eren
+pitfall 1: TypeError
+pitfall 2: none null
+pitfall 3: 3
+pitfall 4: dark
+pitfall 5: Istanbul Mina | Mina Istanbul
+P1 A: <section><h2>Reading</h2>Book notes</section>
+P1 B: <section><h2>Reading</h2>Book notes</section>
+P2 nested: <section><h2>Note</h2>Remember the deadline</section>
+P2 prop: <section><h2>Note</h2>Remember the deadline</section>
+P3 string: <div>hello</div>
+P3 number: <div>42</div>
+P3 one element: <div><strong>bold</strong></div>
+P3 several: <div><i>one</i><b>two</b></div>
+P3 undefined: <div></div>
+P3 null: <div></div>
+P3 false: <div></div>
+P3 function: <div><em>Hello, Ada</em></div>
+P4 forwarded: <section id="agenda" class="panel"><h2>Agenda</h2>Items</section>
+P4 rest wins: <section id="from-rest"><h2>Agenda</h2>Items</section>
+P4 explicit wins: <section id="fixed-id"><h2>Agenda</h2>Items</section>
+P5 named: <article><header>Course</header><main>Shared content</main><footer>2026</footer></article>
+P5 children: <article><header>Course</header><main>Shared content</main><footer>2026</footer></article>
+P6 missing: <p>Hello, Guest!</p>
+P6 undefined: <p>Hello, Guest!</p>
+P6 null: <p>Hello, nobody!</p>
+P7 JavaScript: <button type="submit" aria-label="Send">Send</button>
+--- B2.1: strings are iterable ---
+first two: A d
+remaining: a| |L|o|v|e|l|a|c|e
+
+--- B2.2: Set and Map are iterable ---
+Set: teal coral, navy
+Map first entry: A1 Mina
+Map remaining entries: [["A2","Eren"]]
+
+--- B2.3: destructuring consumes an iterator ---
+destructured: T-01 T-02
+next value after destructuring: undefined
+
+--- B2.4: defaults run only for undefined, from left to right ---
+values: Read todo
+fallback calls: 0
+null keeps its value: null
+fallback calls after null: 0
+later default can use earlier binding: 10 20
+reversed order: ReferenceError (temporal dead zone)
+
+--- B2.5: destructuring assignment can target object properties ---
+updated point: 3 7
+
+--- B2.6: for...of can destructure entry pairs ---
+title=Read
+status=todo
+for...in yields property names, not [key, value] pairs:
+title
+status
+
+> destructuring-guide@0.0.0 ts
+> tsx ts/arrays.ts && tsx ts/objects.ts && tsx ts/params.ts && tsx ts/types.ts && tsx ts/props.tsx && tsx ts/depth.ts
+
+form 1: 2 9
+form 2: Dune [ 'Klara and the Sun', 'Piranesi' ]
+form 3: Copenhagen Oslo
+form 4: high tomorrow
+form 5: Buy milk todo
+form 6: Dune
+form 7: Library 60
+form 8: u7 { username: 'zey', department: 'MIS', year: 2 }
+form 9: Ada prototype [ 'testing', 'launch' ]
+form 10: status in-progress
+form 11: { title: 'Read', status: 'todo' }
+form 11b: 41, 29
+form 12a: theme=dark, notifications=true
+form 12b: A1:Mina, A2:Eren
+T1: 1
+T1 type: 2
+T2: 1965 Dune | 7 seven
+T3: first item
+T4: undefined Guest
+T5: 16
+P1 A: <section><h2>Reading</h2>Book notes</section>
+P1 B: <section><h2>Reading</h2>Book notes</section>
+P2 nested: <section><h2>Note</h2>Remember the deadline</section>
+P2 prop: <section><h2>Note</h2>Remember the deadline</section>
+P3 string: <div>hello</div>
+P3 number: <div>42</div>
+P3 one element: <div><strong>bold</strong></div>
+P3 several: <div><i>one</i><b>two</b></div>
+P3 undefined: <div></div>
+P3 null: <div></div>
+P3 false: <div></div>
+P3 function: <div><em>Hello, Ada</em></div>
+P4 forwarded: <section id="agenda" class="panel"><h2>Agenda</h2>Items</section>
+P4 rest wins: <section id="from-rest"><h2>Agenda</h2>Items</section>
+P4 explicit wins: <section id="fixed-id"><h2>Agenda</h2>Items</section>
+P5 named: <article><header>Course</header><main>Shared content</main><footer>2026</footer></article>
+P5 children: <article><header>Course</header><main>Shared content</main><footer>2026</footer></article>
+P6 missing: <p>Hello, Guest!</p>
+P6 undefined: <p>Hello, Guest!</p>
+P6 null: <p>Hello, nobody!</p>
+P7 manual: <button disabled="">Save</button>
+P7 PropsWithChildren: <button>Cancel</button>
+P7 ComponentProps: <button type="submit" aria-label="Send">Send</button>
+type-level First: 41
+type-level Rest: [ 'MIS', true ]
+Parameters<F>: [ 'T-01', false ]
